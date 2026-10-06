@@ -17,9 +17,25 @@ The analysis constructs a state-quarter panel dataset combining:
 
 The analysis applies multiple regression techniques to a state-level panel dataset.
 
-\[
-GDPGrowth_{it} = \beta_1 COVIDCases_{it} + \beta_2 Population_{it} + \beta_3 RetailSales_{it} + \beta_4 Mobility_{it} + \beta_5 UnemploymentRate_{it} + \alpha_i + \lambda_t + \epsilon_{it}
-\]
+$$
+GDPGrowth_{it}
+=
+\beta_1 COVIDCases_{it}
++
+\beta_2 Population_{it}
++
+\beta_3 RetailSales_{it}
++
+\beta_4 Mobility_{it}
++
+\beta_5 UnemploymentRate_{it}
++
+\alpha_i
++
+\lambda_t
++
+\epsilon_{it}
+$$
 
 - Estimated Pooled OLS, Fixed Effects, and Random Effects models
 - Conducted a Hausman test to compare Fixed Effects and Random Effects specifications
