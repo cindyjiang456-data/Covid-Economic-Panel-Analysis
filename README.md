@@ -1,41 +1,48 @@
 # Econometrics Panel Data Project – Impact of COVID-19 on U.S. GDP Growth
 
-This repository contains my final project for *Econ 330: Econometrics* at Pepperdine University.  
-The project uses Python to analyze how the spread of COVID-19 affected quarterly GDP growth across U.S. states during 2020–2022.
+This project analyzes how the spread of COVID-19 affected quarterly GDP growth across U.S. states from 2020 to 2022 using panel-data econometric methods.
 
 ## 📊 Project Overview
-The study constructs a **state–quarter panel dataset** combining:
-- **COVID-19 case counts** from the Dartmouth Atlas Project  
-- **GDP** from the Bureau of Economic Analysis (BEA)  
-- **Unemployment rate** from the Bureau of Labor Statistics (BLS)  
-- **Retail sales** from the U.S. Census Bureau  
-- **Mobility data** from Google Mobility Reports  
-- **Population data** from the U.S. Census Bureau  
+
+The analysis constructs a state-quarter panel dataset combining:
+
+- COVID-19 case counts from the Dartmouth Atlas Project
+- GDP from the Bureau of Economic Analysis (BEA)
+- Unemployment rate from the Bureau of Labor Statistics (BLS)
+- Retail sales from the U.S. Census Bureau
+- Mobility data from Google Mobility Reports
+- Population data from the U.S. Census Bureau
 
 ## 🧮 Methods
-The econometric model uses multiple regression on panel data:
 
-$GDPGrowth_{it} = \beta_1 COVIDCases_{it} + \beta_2 Population_{it} + \beta_3 RetailSales_{it} + \beta_4 Mobility_{it} + \beta_5 UnemploymentRate_{it} + \alpha_i + \lambda_t + \epsilon_{it}$
+The analysis applies multiple regression techniques to a state-level panel dataset.
 
+\[
+GDPGrowth_{it} = \beta_1 COVIDCases_{it} + \beta_2 Population_{it} + \beta_3 RetailSales_{it} + \beta_4 Mobility_{it} + \beta_5 UnemploymentRate_{it} + \alpha_i + \lambda_t + \epsilon_{it}
+\]
 
-- Implemented **Pooled OLS**, **Fixed Effects**, and **Random Effects** models  
-- Conducted a **Hausman test** to determine the consistent estimator  
-- Interpreted and visualized results to assess the effect of COVID-19 on economic performance  
+- Estimated Pooled OLS, Fixed Effects, and Random Effects models
+- Conducted a Hausman test to compare Fixed Effects and Random Effects specifications
+- Interpreted model results and visualized key relationships in economic performance
 
 ## 🧰 Tools & Libraries
-- Python (`pandas`, `numpy`, `statsmodels`, `matplotlib`)
-- Jupyter Notebook for analysis and visualization  
+
+- Python: pandas, NumPy, statsmodels, matplotlib
+- Jupyter Notebook for data analysis, econometric modeling, and visualization
 
 ## 📈 Key Findings
-- A **rise in COVID-19 cases** significantly reduced GDP growth across states.  
-- **State fixed effects** controlled for unobserved, time-invariant differences (e.g., local policy and culture).  
-- The **fixed effects model** provided the most robust and interpretable results.  
 
-## 📂 Files
-- `330Project.ipynb` – full Jupyter notebook with code and regression analysis  
-- `Econ330_Final_Paper.pdf` – final report summarizing data, methods, and findings  
+- Higher COVID-19 case counts were associated with lower quarterly GDP growth across states.
+- The Fixed Effects specification helped account for unobserved, time-invariant differences across states.
+- Model comparison favored the Fixed Effects approach as the most interpretable specification for this analysis.
 
-## 🧑‍💻 Author
+## 📁 Files
+
+- `covid_economic_panel_analysis.ipynb` — Full data cleaning, regression modeling, diagnostics, and visualization workflow
+- `covid_economic_panel_analysis_report.pdf` — Written report summarizing data, methodology, and findings
+
+## 👩‍💻 Author
+
 **Cindy Jiang**  
-Dual Major: B.S. Mathematics & B.A. Economics, Pepperdine University  
-Email: cindy.jiang@pepperdine.edu
+B.S. Mathematics & B.A. Economics, Pepperdine University  
+LinkedIn: linkedin.com/in/cindy-jiang-a1b7a5272
